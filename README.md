@@ -29,7 +29,7 @@ Before digging into this project, we do some paper surveys to follow up on the n
 
     This paper presents the idea to unfold the EEG standard bandwidths in a more fine-graded equidistant 99-point spectrum to improve accuracy when diagnosing diseases. What's more, they also replace the hard-coded equidistant 99-point spectrum with a flexibly-grading spectrum to further improve the results. Although the machine learning method they use is still random forest, this novel pre-processing step enhances the accuracy.
 
-<img src="https://i.imgur.com/gWrRJjf.png" height="160px" width="360px" />
+<img src="https://i.imgur.com/gWrRJjf.png" height="240px" width="360px" />
 
 * **Comparison of Motor Imagery EEG Classification using Feedforward and Convolutional Neural Network**
 
