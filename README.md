@@ -29,7 +29,7 @@ Before digging into this project, we do some paper surveys to follow up on the n
 
     This paper presents the idea to unfold the EEG standard bandwidths in a more fine-graded equidistant 99-point spectrum to improve accuracy when diagnosing diseases. What's more, they also replace the hard-coded equidistant 99-point spectrum with a flexibly-grading spectrum to further improve the results. Although the machine learning method they use is still random forest, this novel pre-processing step enhances the accuracy.
     
-    ![](https://i.imgur.com/gWrRJjf.png =500x)
+    ![](https://i.imgur.com/gWrRJjf.png)
 
 * **Comparison of Motor Imagery EEG Classification using Feedforward and Convolutional Neural Network**
 
@@ -39,16 +39,16 @@ Before digging into this project, we do some paper surveys to follow up on the n
 
 ### Remove eye-related artifacts
 First, we use EOG signal to identify eye blink or movement artifacts.
-![](https://i.imgur.com/4r0PA85.png =400x)
+![](https://i.imgur.com/4r0PA85.png)
 
 As we can see, eye-related artifacts happened around 2500 seconds. Based on the knowledge we learned from other papers and the class, we choose to use ICA to decompose the raw EEG signals here. ICA is a method for finding underlying factors from multivariate statistical data. Here we use it to decompose the artifact-related components, and then reconstruct the EEG signals with artifact-free components.
 * Raw EEG signals
 
-    ![](https://i.imgur.com/tPWwuqn.png =400x)
+    ![](https://i.imgur.com/tPWwuqn.png)
 
 * Reconstructed EEG signals
 
-    ![](https://i.imgur.com/tNmtoq2.png =400x)
+    ![](https://i.imgur.com/tNmtoq2.png)
 
 ### Artifact Subspace Reconstruction (ASR)
 
@@ -56,18 +56,18 @@ ASR is an adaptive method for the online or offline correction of artifacts comp
     
 * Raw EEG wave
 
-    ![](https://i.imgur.com/PmkjntV.png =400x)
+    ![](https://i.imgur.com/PmkjntV.png)
 
 * EEG wave applied ASR
 
-    ![](https://i.imgur.com/cvaSbDu.png =400x)
+    ![](https://i.imgur.com/cvaSbDu.png)
 
 ### Fast Fourier transform (FFT)
 FFT is an algorithm that calculates the discrete Fourier transform (DFT) of some sequence, and it can be used to transform the structure of the cycle of a waveform into sine components.
 
 We use FFT to transform our data in this project. First, we concatenate 7 artifact free channels, and then apply fast fourier transformation to get the frequency domain data.
 
-![](https://i.imgur.com/u7ykXRW.png=400x)
+![](https://i.imgur.com/u7ykXRW.png)
 
 ### Statistical features of EEG wave
 
@@ -109,25 +109,25 @@ We use Area under the curve (AUC) as our evaluation metric. It is one of the mos
     ![](https://i.imgur.com/QYOTR1i.png =400x)
 
     * Raw EEG wave with FFT as input
-    ![](https://i.imgur.com/1vSAtAN.png =400x)
+    ![](https://i.imgur.com/1vSAtAN.png)
 
     * ICA-processed EEG wave as input 
-    ![](https://i.imgur.com/rYbHpqa.pngc =400x)
+    ![](https://i.imgur.com/rYbHpqa.pngc)
 
     * ICA-processed EEG wave with FFT as input
-    ![](https://i.imgur.com/E309f8v.png =400x)
+    ![](https://i.imgur.com/E309f8v.png)
     
     * ASR-processed EEG wave as input
-    ![](https://i.imgur.com/i0ojjUX.png =400x)
+    ![](https://i.imgur.com/i0ojjUX.png)
 
     * ASR-processed EEG wave with FFT as input
-    ![](https://i.imgur.com/LSEVyVg.png =400x)
+    ![](https://i.imgur.com/LSEVyVg.png)
 
     * Statistical features from raw EEG wave 
-    ![](https://i.imgur.com/Im6BMKL.png =400x)
+    ![](https://i.imgur.com/Im6BMKL.png)
 
     * Statistical features from ICA-processed EEG wave
-    ![](https://i.imgur.com/viu8Aqi.png =400x)
+    ![](https://i.imgur.com/viu8Aqi.png)
     
     * Statistical features from ASR-processed EEG wave
     ![](https://i.imgur.com/aPmkTO3.png)
