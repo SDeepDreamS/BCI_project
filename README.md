@@ -31,6 +31,8 @@ Before digging into this project, we do some paper surveys to follow up on the n
   
 ![](https://i.imgur.com/gWrRJjf.png=200x100)
 
+<img src="https://i.imgur.com/gWrRJjf.png" height="240px" width="160px" />
+
 * **Comparison of Motor Imagery EEG Classification using Feedforward and Convolutional Neural Network**
 
     In this paper, they used several data pre-processing methods and examined how they affect the classification performance of a feedforward neural network. After the preprocessing method, they train a convolutional neural network (CNN) to classify their data. 
